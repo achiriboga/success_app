@@ -36,7 +36,7 @@ class Todo {
     _date = newDate;
   }
 
-  Map<String, dynamic> toMap() {
+  Map <String, dynamic> toMap() {
     var map = Map<String, dynamic>();
     map["title"] = _title;
     map["description"] = _description;

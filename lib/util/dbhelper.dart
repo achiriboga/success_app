@@ -50,14 +50,15 @@ class DbHelper {
   Future<List> getTodos() async {
     Database db = await this.db;
     var result =
-        await db.rawQuery("SELECT * FROM $tblTodo ORDER BY $colDate ASC");
+        await db.rawQuery("SELECT * FROM $tblTodo order by $colPriority ASC");
     return result;
   }
 
   Future<int> getCount() async {
     Database db = await this.db;
     var result = Sqflite.firstIntValue(
-        await db.rawQuery("SELECT COUNT(*) FROM $tblTodo"));
+        await db.rawQuery("SELECT COUNT(*) FROM $tblTodo")
+        );
     return result;
   }
 
