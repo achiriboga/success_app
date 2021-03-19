@@ -37,7 +37,7 @@ class TodoDetailState extends State {
     TextStyle textStyle = Theme.of(context).textTheme.headline6;
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: true,
+        automaticallyImplyLeading: false,
         title: Text(todo.title),
         actions: <Widget>[
           PopupMenuButton<String>(
@@ -170,7 +170,7 @@ class TodoDetailState extends State {
   }
 
   void updateDescription(){
-    todo.title = descriptionController.text;
+    todo.description = descriptionController.text;
   }
 
 }
