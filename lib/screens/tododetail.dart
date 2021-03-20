@@ -5,14 +5,14 @@ import 'package:intl/intl.dart';
 
 DbHelper helper = DbHelper();
 final List<String> choices = const <String>[
-  'Save Todo & Back',
-  'Delete Todo',
-  'Back to List'
+  'Save',
+  'Delete',
+  'Cancel',
 ];
 
-const mnuSave = 'Save Todo & Back';
-const mnuDelete = 'Delete Todo';
-const mnuBack = 'Back to List';
+const mnuSave = 'Save';
+const mnuDelete = 'Delete';
+const mnuBack = 'Cancel';
 
 class TodoDetail extends StatefulWidget {
   final Todo todo;

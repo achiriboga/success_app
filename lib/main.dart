@@ -22,13 +22,16 @@ class MyApp extends StatelessWidget {
     // helper.insertTodo(todo);
     
     return MaterialApp(
-      title: 'Success List',
+      title: 'Your Success List',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.blue,
+        //brightness: Brightness.light,
+        //primaryColor: Colors.lightBlue,
+        accentColor: Colors.amber,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Success List'),
+      home: MyHomePage(title: 'Your Success List'),
     );
   }
 }

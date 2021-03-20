@@ -25,7 +25,7 @@ class TodoListState extends State {
         onPressed: () {
           navigateToDetail(Todo('', 3, ''));
         },
-        tooltip: "Add new Todo",
+        tooltip: "Add new",
         child: new Icon(Icons.add),
       ),
     );
@@ -41,7 +41,16 @@ class TodoListState extends State {
           child: ListTile(
             leading: CircleAvatar(
               backgroundColor: getColor(this.todos[position].priority),
-              child: Text(this.todos[position].priority.toString()),
+              child: Text(
+                getArrow(this.todos[position].priority),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  height: 0.8,
+                  fontSize: 30,
+                  ),
+                ),
+
+              // child: Text(this.todos[position].priority.toString()),
             ),
             title: Text(this.todos[position].title),
             subtitle: Text(this.todos[position].date),
@@ -78,17 +87,34 @@ class TodoListState extends State {
   Color getColor(int priority) {
     switch (priority) {
       case 1:
-        return Colors.red;
+        return Colors.blue[700];
         break;
       case 2:
-        return Colors.yellow;
+        return Colors.blue[500];
         break;
       case 3:
-        return Colors.green;
+        return Colors.blue[100];
         break;
 
       default:
         return Colors.green;
+    }
+  }
+
+  String getArrow(int priority) {
+    switch (priority) {
+      case 1:
+        return "⏏︎";
+        break;
+      case 2:
+        return "⇪";
+        break;
+      case 3:
+        return "⇧";
+        break;
+
+      default:
+        return "⇧";
     }
   }
 
