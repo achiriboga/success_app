@@ -1,4 +1,19 @@
-# todo_app
+# Your Success App
+
+The purpose of this documentation is to present a concept for a new To-Do list.
+
+## Problem
+
+I believe that most users, have a problem seeing which task has more priority. 
+
+## Appetite
+## Solution
+## Rabbit Holes
+## No-gos
+
+
+
+
 
 A new Flutter project.
 
