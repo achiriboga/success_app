@@ -106,13 +106,13 @@ class TodoListState extends State {
   String getArrow(int priority) {
     switch (priority) {
       case 1:
-        return "▲";
+        return "👨‍👩‍👦";
         break;
       case 2:
-        return "△";
+        return "🏥";
         break;
       case 3:
-        return "△";
+        return "👩🏻‍💻";
         break;
 
       default:
