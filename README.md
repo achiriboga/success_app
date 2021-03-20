@@ -20,6 +20,8 @@ Material design has been used to style the user interface, giving it an Android-
  
 The solution is composed by two main screens: Todo List and Todo List Detail.
 
+![Sketch](todo_app/blob/master/lib/images/sketch%201.0.png)
+
 
 
 ## Rabbit Holes
