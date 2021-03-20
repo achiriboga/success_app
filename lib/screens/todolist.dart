@@ -37,7 +37,7 @@ class TodoListState extends State {
       itemBuilder: (BuildContext context, int position) {
         return Card(
           color: Colors.white,
-          elevation: 2.0,
+          elevation: 3.0,
           child: ListTile(
             leading: CircleAvatar(
               backgroundColor: getColor(this.todos[position].priority),
@@ -46,7 +46,9 @@ class TodoListState extends State {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   height: 0.8,
-                  fontSize: 30,
+                  fontSize: 25,
+                  color: getArrowColor(this.todos[position].priority),
+                  //color: Colors.white,
                   ),
                 ),
 
@@ -93,7 +95,7 @@ class TodoListState extends State {
         return Colors.blue[500];
         break;
       case 3:
-        return Colors.blue[100];
+        return Colors.blue[200];
         break;
 
       default:
@@ -104,17 +106,34 @@ class TodoListState extends State {
   String getArrow(int priority) {
     switch (priority) {
       case 1:
-        return "⏏︎";
+        return "▲";
         break;
       case 2:
-        return "⇪";
+        return "△";
         break;
       case 3:
-        return "⇧";
+        return "△";
         break;
 
       default:
-        return "⇧";
+        return "△";
+    }
+  }
+
+    Color getArrowColor(int priority) {
+    switch (priority) {
+      case 1:
+        return Colors.amber;
+        break;
+      case 2:
+        return Colors.amberAccent;
+        break;
+      case 3:
+        return Colors.white;
+        break;
+
+      default:
+        return Colors.white;
     }
   }
 

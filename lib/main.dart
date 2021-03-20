@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo_app/util/dbhelper.dart';
 import 'package:todo_app/model/todo.dart';
 import 'package:todo_app/screens/todolist.dart';
+import 'package:flutter/painting.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     // Todo todo = Todo(
     //     "Buy Mango", 2, today.toString(), "And make sure it gets cancelled");
     // helper.insertTodo(todo);
-    
+
     return MaterialApp(
       title: 'Your Success List',
       debugShowCheckedModeBanner: false,
@@ -31,10 +32,14 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.amber,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Your Success List'),
+      home: MyHomePage(
+        title: ('Your Success List'),
+        
+        ),
     );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -50,8 +55,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-   
-
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),
