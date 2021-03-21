@@ -21,13 +21,14 @@ Material design has been used to style the user interface, giving it an Android-
 The solution is composed by two main screens: Todo List and Todo List Detail.
 
 ![Sketch](./lib/images/sketch%201.0.png)
-![Main screen](./lib/images/Todo List 1.0.png)
-![To-do detail](./lib/images/Todo List 1.0.png)
+![To-Do](./lib/images/Todo%20List%201.0.png)
+![To-Do Detail](./lib/images/Todo%20Detail%201.0.png)
 
+The To-Do detail will have three options available through the elipsis: Save, Delete and Cancel. All of these options will navigate the user to the main screen.
 
 ## Rabbit Holes
 
-The initial design will be based on Material 
+This version will only have the Android feel and look. Also, I am looking for a way to make only one priority per topic. I am having issues with the state, to make sure the options come from the the database dinamically. 
 
 ## No-gos
 
