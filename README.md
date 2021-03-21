@@ -22,13 +22,15 @@ The solution is composed by two main screens: Todo List and Todo List Detail.
 
 <img src="/lib/images/sketch%201.0.png" width="350">
 
-The Todo Detail will have three options available through the elipsis: Save, Delete and Cancel. All of these options will navigate the user to the main screen.
+The Todo List will have a button to add new items. The Todo Detail will have controls to edit the current information or add a new Todo.
 
 
 <p float="left">
     <img src="./lib/images/Todo%20List%201.0.png" alt="Todo List" width="200">
     <img src="./lib/images/Todo%20Detail%201.0.png"alt="Todo List Detail" width="200">
 </p>
+
+The Todo Detail will also have three options available through the top right elipsis: Save, Delete and Cancel. All of these options will navigate the user to the main screen.
 
 ## Rabbit Holes
 
