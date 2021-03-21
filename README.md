@@ -1,6 +1,6 @@
 # Your Success App
 
-The purpose of this documentation is to present a concept for a new To-Do list. If you would like to participate on this project, please feel free to 'Pull Request' your improvements. Also, please feel free to add any comment that can make this concept better in any way.
+The purpose of this documentation is to present a concept for a new To-do list. If you would like to participate on this project, please feel free to 'Pull Request' your improvements. Also, please feel free to add any comment that can make this concept better in any way.
 
 ## Problem
 
@@ -22,18 +22,7 @@ The solution is composed by two main screens: Todo List and Todo List Detail.
 
 <img src="/lib/images/sketch%201.0.png" width="350">
 
-The ToDo Detail will have three options available through the elipsis: Save, Delete and Cancel. All of these options will navigate the user to the main screen.
-
-
-<table>
-  <tr>
-    <td>Todo List</td>
-    <td>Todo Detail</td>
-  </tr>
-  <tr>
-    <img src="./lib/images/Todo%20List%201.0.png" alt="Todo List" width="200">
-    <img src="./lib/images/Todo%20Detail%201.0.png"alt="Todo List Detail" width="200">
- </table>
+The Todo Detail will have three options available through the elipsis: Save, Delete and Cancel. All of these options will navigate the user to the main screen.
 
 
 <p float="left">
