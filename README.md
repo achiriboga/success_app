@@ -10,17 +10,17 @@ Achievers always work from a clear sense of priority. Your Success App is a shor
 
 ## Appetite
 
-I invested two weeks to develop a first iteration of a concept that can be tested with end users. I have also created an app that has been installed directly on two test phones (Android and iOS). These will allow me to interview 50 users while I take notes of their interaction with the app. The experimentation will lead to insights in terms of value, usability, navigation, content, and future integrations.
+I invested two weeks to develop a first iteration of a concept that can be tested with end users. I have also created an app that has been installed directly on two test phones (Android and iOS). These will allow me to interview 50 users while I take notes of their interaction with the app. 
+
+The solution is composed by two main screens: Todo List and Todo List Detail. The experimentation phase will lead to insights in terms of value, usability, navigation, content, and future integrations.
+
+<img src="/lib/images/sketch%201.0.png" width="350">
 
 ## Solution
 
 Your Success List was built using Flutter—Google's open source SDK for creating mobile, web and desktop from a single codebase. The database used is SQLite.  
 
 Material design has been used to style the user interface, giving it an Android-styled look and feel when using any type of phone. 
- 
-The solution is composed by two main screens: Todo List and Todo List Detail.
-
-<img src="/lib/images/sketch%201.0.png" width="350">
 
 The Todo List will have a button to add new items. The Todo Detail will have controls to edit the current information or add a new Todo.
 
