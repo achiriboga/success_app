@@ -21,7 +21,8 @@ Material design has been used to style the user interface, giving it an Android-
 The solution is composed by two main screens: Todo List and Todo List Detail.
 
 ![Sketch](./lib/images/sketch%201.0.png)
-
+![Main screen](./lib/images/Todo List 1.0.png)
+![To-do detail](./lib/images/Todo List 1.0.png)
 
 
 ## Rabbit Holes
@@ -30,9 +31,9 @@ The initial design will be based on Material
 
 ## No-gos
 
-In a future iteration, a more scalable data storage technology will be incorporated by using either Google Firestore or Azure Cosmos. Also, with the goal to connect this list to popular calendar solutions—Outlook, Google, iCalendar— a SSO integration will be implemented next.
+In a future iteration, a more scalable data storage technology will be incorporated by using either Google Firestore or Azure Cosmos. Also, with the goal to connect this To-do list to popular calendar solutions—Outlook, Google, iCalendar— a SSO integration will be implemented next.
 
-In terms of frontend design, Cupertino widgets will be added to the condebase to create iOS-styled app, giving the user the look and feel appropriate for their device. 
+In terms of frontend design, Cupertino widgets will be added to the condebase to create iOS-styled app, giving the user the look and feel appropriate for their device. Finally, phone notifications—based on due dates— has been added to the backlog.
 
 
 
