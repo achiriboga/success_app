@@ -21,10 +21,18 @@ Material design has been used to style the user interface, giving it an Android-
 The solution is composed by two main screens: Todo List and Todo List Detail.
 
 <img src="/lib/images/sketch%201.0.png" width="300">
-<img src="./lib/images/Todo%20List%201.0.png" width="200">
-<img src="./lib/images/Todo%20Detail%201.0.png" width="200">
 
-The To-Do detail will have three options available through the elipsis: Save, Delete and Cancel. All of these options will navigate the user to the main screen.
+The ToDo Detail will have three options available through the elipsis: Save, Delete and Cancel. All of these options will navigate the user to the main screen.
+
+<div class="row">
+  <div class="column">
+    <img src="./lib/images/Todo%20List%201.0.png" alt="Todo List" width="200">
+  </div>
+  <div class="column">
+    <img src="./lib/images/Todo%20Detail%201.0.png"alt="Todo List Detail" width="200">
+  </div>
+</div>
+
 
 ## Rabbit Holes
 
