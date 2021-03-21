@@ -20,7 +20,7 @@ Material design has been used to style the user interface, giving it an Android-
  
 The solution is composed by two main screens: Todo List and Todo List Detail.
 
-![Sketch](./lib/images/sketch%201.0.png?s=20)
+![Sketch](./lib/images/sketch%201.0.png?v=4&s=20)
 ![To-Do](./lib/images/Todo%20List%201.0.png?s=10)
 ![To-Do Detail](./lib/images/Todo%20Detail%201.0.png?s=10)
 
