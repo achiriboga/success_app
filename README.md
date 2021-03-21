@@ -20,8 +20,8 @@ Material design has been used to style the user interface, giving it an Android-
  
 The solution is composed by two main screens: Todo List and Todo List Detail.
 
-![Sketch](./lib/images/sketch%201.0.png | width=100)
-![To-Do](./lib/images/Todo%20List%201.0.png | width=150)
+![Sketch](./lib/images/sketch%201.0.png width=100)
+![To-Do](./lib/images/Todo%20List%201.0.png =150)
 ![To-Do Detail](./lib/images/Todo%20Detail%201.0.png | width=150)
 
 The To-Do detail will have three options available through the elipsis: Save, Delete and Cancel. All of these options will navigate the user to the main screen.
