@@ -34,7 +34,7 @@ The Todo Detail will also have three options available through the top right eli
 
 ## Rabbit Holes
 
-This version will only have the Android feel and look. Also, I am looking for a way to make only one priority per topic. I am having issues with the state, to make sure the options come from the the database dinamically. 
+This version will only have Android's feel and look. Also, I am looking for a way to make to dinamically filter topics in the Todo Detail View, in order to have only one "High" priority per topic. I am having issues with the state, as the list map function can not display future types—I'm trying to connect to the DB directly.
 
 ## No-gos
 
