@@ -32,7 +32,7 @@ class DbHelper {
 
   Future<Database> initializeDb() async {
     Directory dir = await getApplicationDocumentsDirectory();
-    String path = dir.path + "todos.db";
+    String path = dir.path + "todosnew.db";
     var dbTodos = await openDatabase(path, version: 1, onCreate: _createDb);
     return dbTodos;
   }
@@ -55,6 +55,13 @@ class DbHelper {
         await db.rawQuery("SELECT * FROM $tblTodo order by $colPriority ASC");
     return result;
   }
+
+  // Future<List> getValidTopics() async {
+  //   Database db = await this.db;
+  //   var result =
+  //       await db.rawQuery("SELECT $colTopic FROM $tblTodo WHERE $colPriority != 1");
+  //   return result;
+  // }
 
   Future<int> getCount() async {
     Database db = await this.db;

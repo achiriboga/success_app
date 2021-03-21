@@ -23,7 +23,7 @@ class TodoListState extends State {
       body: todoListItems(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          navigateToDetail(Todo('', 3, ''));
+          navigateToDetail(Todo('', 3, '', "Family"));
         },
         tooltip: "Add new",
         child: new Icon(Icons.add),
@@ -37,7 +37,7 @@ class TodoListState extends State {
       itemBuilder: (BuildContext context, int position) {
         return Card(
           color: Colors.white,
-          elevation: 3.0,
+          elevation: 2.0,
           child: ListTile(
             leading: CircleAvatar(
               backgroundColor: getColor(this.todos[position].priority),
@@ -46,16 +46,14 @@ class TodoListState extends State {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   height: 0.8,
-                  fontSize: 25,
+                  fontSize: 20,
                   color: getArrowColor(this.todos[position].priority),
-                  //color: Colors.white,
-                  ),
                 ),
-
-              // child: Text(this.todos[position].priority.toString()),
+              ),
             ),
             title: Text(this.todos[position].title),
-            subtitle: Text(this.todos[position].date),
+            subtitle: Text(getTopicIcon(this.todos[position].topic) + " " + this.todos[position].topic + " by "
+                + this.todos[position].date),
             onTap: () {
               debugPrint("Tapped on " + this.todos[position].id.toString());
               navigateToDetail(this.todos[position]);
@@ -103,24 +101,45 @@ class TodoListState extends State {
     }
   }
 
+  String getTopicIcon(String topic) {
+    switch (topic) {
+      case "Family":
+        return "👨‍👩‍👦";
+        break;
+      case "Work":
+        return "‍👩🏻‍💻";
+        break;
+      case "Health":
+        return "👨🏾‍⚕️";
+        break;
+      case "Friends":
+        return "💃";
+        break;
+      case "Home":
+        return "🏠";
+        break;
+      default:
+        return "";
+    }
+  }
+
   String getArrow(int priority) {
     switch (priority) {
       case 1:
-        return "👨‍👩‍👦";
+        return "‍▲";
         break;
       case 2:
-        return "🏥";
+        return "△";
         break;
       case 3:
-        return "👩🏻‍💻";
+        return "△";
         break;
-
       default:
         return "△";
     }
   }
 
-    Color getArrowColor(int priority) {
+  Color getArrowColor(int priority) {
     switch (priority) {
       case 1:
         return Colors.amber;

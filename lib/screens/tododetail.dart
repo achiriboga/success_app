@@ -26,6 +26,8 @@ class TodoDetailState extends State {
   Todo todo;
   TodoDetailState(this.todo);
   final _priorities = ["High", "Medium", "Low"];
+  final _topics = ["Family", "Health", "Work", "Friends", "Home"];
+  String _topic = "Family";
   String _priority = "Low";
   TextEditingController titleController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
@@ -34,6 +36,7 @@ class TodoDetailState extends State {
   Widget build(Object context) {
     titleController.text = todo.title;
     descriptionController.text = todo.description;
+    
     TextStyle textStyle = Theme.of(context).textTheme.headline6;
     return Scaffold(
       appBar: AppBar(
@@ -86,17 +89,45 @@ class TodoDetailState extends State {
                         ),
                       )),
                   ListTile(
-                      title: DropdownButton<String>(
-                    items: _priorities.map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                    style: textStyle,
-                    value: retrievePriority(todo.priority),
-                    onChanged: (value)=>updatePriority(value),
-                  ))
+                    title: DropdownButtonFormField<String>(
+                      decoration: InputDecoration(
+                        filled: false,
+                        labelText: 'Priority',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
+                      items: _priorities.map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      style: textStyle,
+                      value: retrievePriority(todo.priority),
+                      onChanged: (value) => updatePriority(value),
+                    ),
+                  ),
+                  ListTile(
+                    title: DropdownButtonFormField<String>(
+                      decoration: InputDecoration(
+                        filled: false,
+                        labelText: 'Topic',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
+                      items: _topics.map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      style: textStyle,
+                      value: todo.topic,
+                      onChanged: (value) => updateTopic(value),
+                    ),
+                  ),
                 ],
               )
             ],
@@ -121,56 +152,63 @@ class TodoDetailState extends State {
             title: Text("Delete Todo"),
             content: Text("The Todo has been deleted"),
           );
-          showDialog(
-            context: context,
-            builder: (_) => alertDialog
-          );
-          
+          showDialog(context: context, builder: (_) => alertDialog);
         }
         break;
       case mnuBack:
-       Navigator.pop(context, true);
+        Navigator.pop(context, true);
     }
   }
+
+
 
   void save() {
     todo.date = new DateFormat.yMd().format(DateTime.now());
     if (todo.id != null) {
       helper.updateTodo(todo);
-    }
-    else {
+    } else {
       helper.insertTodo(todo);
     }
-    Navigator.pop(context,true);
+    Navigator.pop(context, true);
   }
 
-  void updatePriority (String value) {
-      switch(value) {
-        case "High":
-          todo.priority = 1;
-          break;
-        case "Medium":
-          todo.priority = 2;
-          break;
-        case "Low":
-          todo.priority = 3;
-          break;
-      }
-      setState( () {
-        _priority=value;
-      });
+  void updatePriority(String value) {
+    switch (value) {
+      case "High":
+        todo.priority = 1;
+        break;
+      case "Medium":
+        todo.priority = 2;
+        break;
+      case "Low":
+        todo.priority = 3;
+        break;
     }
+    setState(() {
+      _priority = value;
+    });
+  }
+
+  void updateTopic(String value) {
+    todo.topic = value;
+    setState(() {
+      _topic = value;
+    });
+  }
 
   String retrievePriority(int value) {
-    return _priorities[value-1];
+    return _priorities[value - 1];
   }
 
-  void updateTitle(){
+  String retrieveTopic(String value) {
+    return _topic;
+  }
+
+  void updateTitle() {
     todo.title = titleController.text;
   }
 
-  void updateDescription(){
+  void updateDescription() {
     todo.description = descriptionController.text;
   }
-
 }

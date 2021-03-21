@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/util/dbhelper.dart';
-import 'package:todo_app/model/todo.dart';
+//import 'package:todo_app/util/dbhelper.dart';
+//import 'package:todo_app/model/todo.dart';
 import 'package:todo_app/screens/todolist.dart';
-import 'package:flutter/painting.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -51,7 +51,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  //int _counter = 0;
 
   @override
   Widget build(BuildContext context) {
